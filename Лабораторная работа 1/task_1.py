@@ -35,6 +35,7 @@ class MyBudget:
         >>> my_budget.how_much()
         -100
         """
+        ...
 
     def possible_debts(self) -> int | float:
         """
