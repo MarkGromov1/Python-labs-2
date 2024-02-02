@@ -33,8 +33,8 @@ class MyBudget:
         Примеры:
         >>> my_budget = MyBudget(100, 200, 300)
         >>> my_budget.how_much()
+        -100
         """
-        ...
 
     def possible_debts(self) -> int | float:
         """
@@ -45,6 +45,7 @@ class MyBudget:
         Примеры:
         >>> my_budget = MyBudget(100, 200, 300)
         >>> my_budget.possible_debts()
+        0
         """
         ...
 
@@ -83,11 +84,12 @@ class BusesForChildren:
         """
         Функция, которая определяет количество автобусов, которого хватит, чтобы уместить всех детей.
 
-        :return: Необходимое количество автобусов, равное произведению количества детей на количество мест в одном автобусе, округленному в большую сторону
+        :return: Необходимое количество автобусов, равное частному количества детей и количества мест в одном автобусе, округленному в большую сторону
 
         Примеры:
         >>> buses_for_children = BusesForChildren(100, 20, 4)
         >>> buses_for_children.bus_number()
+        5
         """
         ...
 
@@ -100,6 +102,7 @@ class BusesForChildren:
         Примеры:
         >>> buses_for_children = BusesForChildren(100, 20, 4)
         >>> buses_for_children.new_buses()
+        1
         """
         ...
 
@@ -115,6 +118,7 @@ class PairOfNumbers:
 
         Примеры:
         >>> pair_of_numbers = PairOfNumbers(15, 20, 3)
+
         """
         if not isinstance(first_number, int):
             raise TypeError("Первое число должно быть целым")
@@ -132,6 +136,7 @@ class PairOfNumbers:
         Примеры:
         >>> pair_of_numbers = PairOfNumbers(15, 20, 3)
         >>> pair_of_numbers.numbers_quotient()
+        False
         """
         ...
 
@@ -144,6 +149,8 @@ class PairOfNumbers:
         Примеры:
         >>> pair_of_numbers = PairOfNumbers(15, 20, 3)
         >>> pair_of_numbers.divider_quotient()
+        True
+        False
         """
         ...
 
@@ -152,6 +159,5 @@ class PairOfNumbers:
 
 if __name__ == "__main__":
     import doctest
-
     doctest.testmod()  # TODO работоспособность экземпляров класса проверить с помощью doctest
     pass
