@@ -25,9 +25,6 @@ class PaperBook(Book):
         super().__init__(name, author)
         self.pages = pages
 
-    def __str__(self):
-        return f"{super().__str__()} Количество страниц {self.pages}"
-
     def __repr__(self):
         return f"{super().__repr__().replace(')', '')}, pages={self.pages!r})"
 
@@ -48,9 +45,6 @@ class AudioBook(Book):
     def __init__(self, name: str, author: str, duration: float):
         super().__init__(name, author)
         self.duration = duration
-
-    def __str__(self):
-        return f"{super().__str__()} Продолжительность {self.duration} секунд"
 
     def __repr__(self):
         return f"{super().__repr__().replace(')', '')}, duration={self.duration!r})"
